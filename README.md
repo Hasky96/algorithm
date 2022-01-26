@@ -1,3 +1,3 @@
 # Algorithm
-Algorithm Study by Python!
+Algorithm Study by Python!!
 
