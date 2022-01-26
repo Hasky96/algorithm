@@ -1,2 +1,3 @@
-# algorithm
-알고리즘 
+# Algorithm
+Algorithm Study by Python!
+
