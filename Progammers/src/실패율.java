@@ -1,7 +1,4 @@
-import java.lang.reflect.Array;
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.PriorityQueue;
 
 
@@ -15,9 +12,7 @@ public class 실패율 {
     public static int[] solution(int N, int[] stages) {
         int[] answer = new int[N];
         double[] userStage = new double[N+1];
-        Arrays.fill(userStage, 0);
-        System.out.println(Arrays.toString(userStage));
-
+//        Arrays.fill(userStage, 0);
         Arrays.sort(stages);// 오름차순 정렬
         int user = stages.length;
         int players = 0;
@@ -41,7 +36,6 @@ public class 실패율 {
                 userStage[N] = (double) unclearPlayer/(players);
             }
         }
-        System.out.println(Arrays.toString(userStage));
         PriorityQueue<Qstage> Q = new PriorityQueue<>();
         for(int i = 1; i<userStage.length; i++){
             Q.add(new Qstage(i, userStage[i]));
@@ -85,3 +79,18 @@ public class 실패율 {
         }
     }
 }
+/*
+1 2 2 2 3 3 4 6
+분모 0
+분모 ++
+분자 ++
+0/1 // 5
+1/2 // 4
+1/3 // 3
+2/4 // 3
+1/5 // 2
+2/6 // 2
+3/7 // 2
+1/8 // 1
+
+* */
