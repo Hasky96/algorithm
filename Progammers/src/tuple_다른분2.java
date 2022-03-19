@@ -12,7 +12,7 @@ public class tuple_다른분2 {
     public static int[] solution(String s) {
 
         Map<String, Integer> map = new HashMap<>();
-        Pattern pattern = Pattern.compile("[0-9]+");
+        Pattern pattern = Pattern.compile("[0-9]");
         Matcher matcher = pattern.matcher(s);
         while (matcher.find()) {
             String n = matcher.group();
