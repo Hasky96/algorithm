@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3a75483-cc96-49cb-a61b-a50fdfee6946" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Boj.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Boj.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DFS와BFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/DFS와BFS.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +61,7 @@
       <updated>1645623513113</updated>
       <workItem from="1645623515149" duration="17000" />
       <workItem from="1647779708299" duration="2282000" />
+      <workItem from="1647790221119" duration="3097000" />
     </task>
     <servers />
   </component>
