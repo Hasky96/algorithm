@@ -1,62 +1,70 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
+import java.util.*;
 import java.util.stream.Stream;
 
 public class DFS와BFS {
-    static ArrayList dfsAns = new ArrayList();
-    static ArrayList bfsAns = new ArrayList();
-    static int N;
+
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String[] temp = br.readLine().split(" ");
-        N = Integer.parseInt(temp[0]);
+        int N = Integer.parseInt(temp[0]);
         int M = Integer.parseInt(temp[1]);
         int V = Integer.parseInt(temp[2]);
         int[][] arr = new int[N+1][N+1];
-        for(int i=1; i<=M;i++){
+        for(int i=0; i<M;i++){
             temp = br.readLine().split(" ");
             arr[Integer.parseInt(temp[0])][Integer.parseInt(temp[1])] = 1;
             arr[Integer.parseInt(temp[1])][Integer.parseInt(temp[0])] = 1;
         }
-        DFS(arr, V, 0);
-        dfsAns.stream().forEach(x-> System.out.print(x+" "));
-        System.out.println();
-        BFS(arr, V, 0, new int[1000]);
+        String dfsAns = dfs(N, arr, V);
+        String bfsAns = bfs(N, arr, V);
+        System.out.println(dfsAns);
+        System.out.println(bfsAns);
     }
 
-    public static void DFS(int[][] arr,int start, int cnt){
-        dfsAns.add(start);
-        if(dfsAns.size() == N+1) {
-        }
-        else {
-            for (int i = 1; i <= N; i++) {
-                if (arr[start][i] == 1 && !dfsAns.contains(i)) {
-                    DFS(arr, i, ++cnt);
-                }
+    public static String dfs(int size, int[][] arr, int start){
+      String ans = "";
+      Stack<Integer> stack = new Stack<>();
+      stack.push(start);
+      int[] visited = new int[size+1];
+      while(!stack.isEmpty()){
+          int temp = stack.peek();
+          visited[temp] = 1;
+          for(int i = 1 ; i<=size;i++){
+              if(visited[i]==0 && arr[temp][i]==1){
+                  temp=i;
+                  stack.push(temp);
+                  break;
+              }
+              if(i==size){
+                  stack.pop();
+              }
+          }
+      }
+      return ans;
+    }
+
+    public static String bfs(int size, int[][] arr, int start){
+        String ans = "";
+        Queue<Integer> Q = new LinkedList<>();
+        int[] visited = new int[size+1];
+        Q.add(start);
+        while(!Q.isEmpty()){
+            int temp = Q.poll();
+            if (visited[temp] == 0){
+                ans += temp + " ";
             }
-        }
-    }
-
-    public static void BFS(int[][] arr, int start, int cnt, int[] ans){
-        if(cnt == N){
-            Arrays.stream(ans).forEach(x-> bfsAns.add(x));
-        }else {
-            ans[cnt] = start;
-            ArrayList Q = new ArrayList();
-            for (int i = 1; i <= N; i++) {
-                if (arr[start][i] == 1 && !Q.contains(i)) {
+            visited[temp] = 1;
+            for(int i = 1; i<= size ; i++){
+                if(visited[i] == 0 && arr[temp][i] == 1 && !Q.contains(i)){
                     Q.add(i);
                 }
             }
-            for (int i = 0; i < Q.size(); i++) {
-                BFS(arr, (int) Q.get(i), cnt + 1, ans);
-            }
         }
+        return ans;
     }
 }
 
