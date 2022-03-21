@@ -22,21 +22,23 @@ public class DFS와BFS {
         String dfsAns = dfs(N, arr, V);
         String bfsAns = bfs(N, arr, V);
         System.out.println(dfsAns);
-        System.out.println(bfsAns);
+        System.out.print(bfsAns);
     }
 
     public static String dfs(int size, int[][] arr, int start){
-      String ans = "";
+      String ans = start + " ";
       Stack<Integer> stack = new Stack<>();
       stack.push(start);
       int[] visited = new int[size+1];
       while(!stack.isEmpty()){
           int temp = stack.peek();
+
           visited[temp] = 1;
           for(int i = 1 ; i<=size;i++){
-              if(visited[i]==0 && arr[temp][i]==1){
+              if(visited[i]==0 && arr[temp][i]==1 && !stack.contains(i)){
                   temp=i;
                   stack.push(temp);
+                  ans += temp + " ";
                   break;
               }
               if(i==size){
