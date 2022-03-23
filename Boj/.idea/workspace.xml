@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a3a75483-cc96-49cb-a61b-a50fdfee6946" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DFS와BFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/DFS와BFS.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +36,14 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.DFS스페셜저지">
+    <configuration name="DFS스페셜저지" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DFS스페셜저지" />
+      <module name="Boj" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DFS와BFS" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DFS와BFS" />
       <module name="Boj" />
@@ -47,6 +53,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DFS스페셜저지" />
         <item itemvalue="Application.DFS와BFS" />
       </list>
     </recent_temporary>
@@ -63,6 +70,7 @@
       <workItem from="1647779708299" duration="2282000" />
       <workItem from="1647790221119" duration="3097000" />
       <workItem from="1647867746654" duration="5473000" />
+      <workItem from="1647958621093" duration="3206000" />
     </task>
     <servers />
   </component>
