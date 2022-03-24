@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a3a75483-cc96-49cb-a61b-a50fdfee6946" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DFS스페셜저지.java" beforeDir="false" afterPath="$PROJECT_DIR$/DFS스페셜저지.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +72,7 @@
       <workItem from="1647790221119" duration="3097000" />
       <workItem from="1647867746654" duration="5473000" />
       <workItem from="1647958621093" duration="3206000" />
+      <workItem from="1648038103198" duration="8550000" />
     </task>
     <servers />
   </component>
