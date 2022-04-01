@@ -51,7 +51,7 @@ public class 실패율 {
     static class Qstage implements Comparable<Qstage>{
         private int stageNum;
         private double falure;
-
+        //Comparable 제작하여 사용
         public Qstage(int stageNum, double falure) {
             this.stageNum = stageNum;
             this.falure = falure;

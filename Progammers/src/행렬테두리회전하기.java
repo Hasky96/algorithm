@@ -28,7 +28,8 @@ public class 행렬테두리회전하기 {
         int min = table[query[0]][query[1]];
         int se = query[2]-query[0];
         int ga = query[3]-query[1];
-
+        // 오른쪽 아래 왼쪽 위쪽 방향을 모두 순회 하면서 확인
+        // 달팽이 문제와 유사
         //right
         int temp = table[query[0]][query[3]];
         int c1= query[3];
@@ -36,8 +37,6 @@ public class 행렬테두리회전하기 {
             table[query[0]][c1--]= table[query[0]][c1];
             if(min>table[query[0]][c1]) min=table[query[0]][c1];
         }
-
-
         //down
 //      System.out.println(Arrays.deepToString(table));
         int temp2 = table[query[2]][query[3]];
