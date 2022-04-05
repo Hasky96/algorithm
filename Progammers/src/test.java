@@ -1,10 +1,17 @@
+import com.sun.source.tree.Tree;
+
+import java.time.temporal.Temporal;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class test {
     public static void main(String[] args) {
-        System.out.println(Integer.parseInt("000003"));
-
+        Queue<int[]> t = new PriorityQueue<>(Comparator.comparing(a->a[0]));
+        t.offer(new int[]{5,3,2});
+        t.offer(new int[]{2,3,2});
+        t.offer( new int[]{3,3,2});
+        System.out.println(t.poll()[0]);
     }
 }
 //        String a = "a";
