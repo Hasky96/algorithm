@@ -19,7 +19,7 @@ public class 양궁대회 {
 
         return answer == null? new int[]{-1} : answer;
     }
-
+ 
     public static void dfs(int n, int[] arr,int j){
         // 종료 조건
         if(n < 1){
