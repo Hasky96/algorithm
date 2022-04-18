@@ -1,8 +1,9 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class 순위검색 {
+
+    static ArrayList<Integer> arr;
+
     public static void main(String[] args) {
         System.out.println(Arrays.toString(solution(new String[]{"java backend junior pizza 150","python frontend senior chicken 210","python frontend senior chicken 150","cpp backend senior pizza 260","java backend junior chicken 80","python backend senior chicken 50"},
                 new String[]{"java and backend and junior and pizza 100","python and frontend and senior and chicken 200","cpp and - and senior and pizza 250","- and backend and senior and - 150","- and - and - and chicken 100","- and - and - and - 150"})
@@ -24,15 +25,13 @@ public class 순위검색 {
             this.score = Integer.parseInt(info[4]);
         }
 
-        public boolean check(String str){
+        public void check(String str){
             String[] temp = str.split(" and ");
-            if( Integer.parseInt(temp[3].split(" ")[1]) <= this.score&&
-                (temp[0].equals("-") || temp[0].equals(this.lang))&&
+            if( (temp[0].equals("-") || temp[0].equals(this.lang))&&
                 (temp[1].equals("-") || temp[1].equals(this.dep))&&
                 (temp[2].equals("-") || temp[2].equals(this.career))&&
                 (temp[3].split(" ")[0].equals("-") || temp[3].split(" ")[0].equals(this.soulfood))
-            ) return true;
-            return false;
+            ) arr.add(this.score);
         }
 
     }
@@ -43,13 +42,37 @@ public class 순위검색 {
             list.add(new developer(i));
         }
         for(int i=0;i<query.length;i++){
+            System.out.println(i);
+            if(list.size()==0){
+                answer[i] = 0;
+            }
+            arr = new ArrayList();
             for(developer d:list){
-                if(d.check(query[i])){
-                    answer[i] ++;
+                d.check(query[i]);
+            }
+            int cut = Integer.parseInt(query[i].split(" and ")[3].split(" ")[1]);
+            Collections.sort(arr);
+            loop : for(int st=0, end = arr.size()-1;st <= end;) {
+                int mid = (st + end) / 2;
+                System.out.println(arr.toString());
+                System.out.println(st+" "+mid+" "+end+" "+cut);
+                if (mid == 0) {
+                    if(arr.get(mid)>=cut){
+                        answer[i] = arr.size()-1;
+                        break loop;
+                    }
+                    answer[i] = 0;
+                    break loop;
+                }else if (arr.get(mid - 1) < cut && cut <= arr.get(mid)) {
+                    answer[i] = arr.size() - mid;
+                    break loop;
+                } else if (arr.get(mid) < cut) {
+                    st = mid;
+                } else if (arr.get(mid) > cut) {
+                    end = mid;
                 }
             }
         }
         return answer;
     }
-
 }
