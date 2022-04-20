@@ -56,14 +56,19 @@ public class 순위검색 {
                 int mid = (st + end) / 2;
                 System.out.println(arr.toString());
                 System.out.println(st+" "+mid+" "+end+" "+cut);
-                if (mid == 0) {
+                if (st==end) {
                     if(arr.get(mid)>=cut){
-                        answer[i] = arr.size()-1;
+                        answer[i] = arr.size();
                         break loop;
                     }
                     answer[i] = 0;
                     break loop;
-                }else if (arr.get(mid - 1) < cut && cut <= arr.get(mid)) {
+                }else if(mid==0){
+                    if(arr.get(1)>=cut){
+                        answer[i] = arr.size()-1;
+                        break loop;
+                    }
+                }else if (mid>0&&arr.get(mid - 1) < cut && cut <= arr.get(mid)) {
                     answer[i] = arr.size() - mid;
                     break loop;
                 } else if (arr.get(mid) < cut) {
