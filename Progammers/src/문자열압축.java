@@ -1,46 +1,46 @@
-public class 문자열압축 {
-
-    public static void main(String[] args) {
-        String s = "aabbaccc";
-        System.out.println(solution(s));
-    }
-
-    public static int solution(String s) {
-        int answer = 0;
-        answer = s.length()*2;
-
-        // 압축문자 길이
-        for(int i = 1; i<=s.length()/2;i++)
-            answer = Math.min(answer, zip(i,s));
-        return answer;
-    }
-
-    public static int zip(int zipLen, String str){
-        String newStr = "";
-        String cut = "";
-        int cnt = 0;
-        for(int i = 0 ;i<str.length();){
-            if(i+zipLen <= str.length()){
-                String s = str.substring(i, i+zipLen);
-                if(!s.equals(cut)){
-                    cut = s;
-                    cnt = 1;
-                    i= i+zipLen>str.length()?;
-                }else{
-                    cnt +=1;
-                    i = i+zipLen;
-                }
-            }else{
-                newStr += String.valueOf(str.charAt(i));
-            }
-        }
-        System.out.println(zipLen);
-        System.out.println(newStr);
-        return newStr.length();
-    }
-
-
-}
+//public class 문자열압축 {
+//
+//    public static void main(String[] args) {
+//        String s = "aabbaccc";
+//        System.out.println(solution(s));
+//    }
+//
+//    public static int solution(String s) {
+//        int answer = 0;
+//        answer = s.length()*2;
+//
+//        // 압축문자 길이
+//        for(int i = 1; i<=s.length()/2;i++)
+//            answer = Math.min(answer, zip(i,s));
+//        return answer;
+//    }
+//
+//    public static int zip(int zipLen, String str){
+//        String newStr = "";
+//        String cut = "";
+//        int cnt = 0;
+//        for(int i = 0 ;i<str.length();){
+//            if(i+zipLen <= str.length()){
+//                String s = str.substring(i, i+zipLen);
+//                if(!s.equals(cut)){
+//                    cut = s;
+//                    cnt = 1;
+//                    i= i+zipLen>str.length();
+//                }else{
+//                    cnt +=1;
+//                    i = i+zipLen;
+//                }
+//            }else{
+//                newStr += String.valueOf(str.charAt(i));
+//            }
+//        }
+//        System.out.println(zipLen);
+//        System.out.println(newStr);
+//        return newStr.length();
+//    }
+//
+//
+//}
 /*
 class Solution {
     public int solution(String s) {
