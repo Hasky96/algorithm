@@ -12,8 +12,14 @@ public class test {
 //        t.offer(new int[]{2,3,2});
 //        t.offer( new int[]{3,3,2});
 //        System.out.println(t.poll()[0]);
-        String s = "asdf";
-        System.out.println(s.substring(0,4));
+          Queue Q =new LinkedList();
+          Q.offer(1);
+
+          Q.offer(2);
+          Q.offer(3);
+        System.out.println(Q);
+        System.out.println(Q.poll());
+        System.out.println(Q);
     }
 }
 //        String a = "a";
