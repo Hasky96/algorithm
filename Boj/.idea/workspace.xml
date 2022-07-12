@@ -3,7 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="a3a75483-cc96-49cb-a61b-a50fdfee6946" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DFS스페셜저지.java" beforeDir="false" afterPath="$PROJECT_DIR$/DFS스페셜저지.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/q1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/src/DFS.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/src/test.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,13 +36,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-  </component>
-  <component name="RunManager" selected="Application.DFS스페셜저지">
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/SSAFY/Desktop/algorithm/Boj"
+  }
+}]]></component>
+  <component name="RunManager" selected="애플리케이션.DFS스페셜저지">
     <configuration name="DFS스페셜저지" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DFS스페셜저지" />
       <module name="Boj" />
@@ -52,12 +59,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.DFS스페셜저지" />
-        <item itemvalue="Application.DFS와BFS" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -73,6 +74,7 @@
       <workItem from="1647867746654" duration="5473000" />
       <workItem from="1647958621093" duration="3206000" />
       <workItem from="1648038103198" duration="8550000" />
+      <workItem from="1657594660236" duration="70000" />
     </task>
     <servers />
   </component>
