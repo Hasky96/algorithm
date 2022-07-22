@@ -2,6 +2,7 @@ package SelfStudying;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Dijkstra {
@@ -16,6 +17,14 @@ public class Dijkstra {
             this.rink = rink;
         }
 
+        @Override
+        public String toString() {
+            return "Node{" +
+                    "vertex=" + vertex +
+                    ", rink=" + rink +
+                    ", weight=" + weight +
+                    '}';
+        }
     }
     // problem boj 1753 최단경로
     public static void main(String[] args) throws Exception{
@@ -30,18 +39,20 @@ public class Dijkstra {
         minEdge[0] = Integer.MAX_VALUE;
         Node[] adjList = new Node[V+1];
 
-        for(int j=1;j<=V;j++){
+        for (int j = 0; j <=V ; j++) {
+            minEdge[j] = Integer.MAX_VALUE;
+        }
+        for(int j=1;j<=E;j++){
             int start, end, weight;
             st = new StringTokenizer(in.readLine());
             start = Integer.parseInt(st.nextToken());
             end = Integer.parseInt(st.nextToken());
             weight = Integer.parseInt(st.nextToken());
             adjList[start] = new Node(end, weight, adjList[start]);
-            adjMatrix[start][end] = weight;
-            minEdge[j] = Integer.MAX_VALUE;
+
         }
 
-        boolean[] visited = new boolean[E+1];
+        boolean[] visited = new boolean[V+1];
         visited[0] = true;
         minEdge[i] = 0;
         int min = 0;
@@ -55,9 +66,10 @@ public class Dijkstra {
             }
 
             visited[min] = true;
-            for (int j = 1; j <=V ; j++) {
-                if(adjMatrix[min][j]!=0 && minEdge[j] > minEdge[min] + adjMatrix[min][j]){
-                    minEdge[j] = minEdge[min] + adjMatrix[min][j];
+
+            for(Node temp=adjList[min];temp != null; temp = temp.rink){
+                if(!visited[temp.vertex] && minEdge[temp.vertex] > minEdge[min] + temp.weight){
+                    minEdge[temp.vertex] = minEdge[min] + temp.weight;
                 }
             }
         }
