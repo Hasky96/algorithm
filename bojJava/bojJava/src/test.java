@@ -23,6 +23,7 @@ public class test {
 //        t.pollLastEntry();
 //
 //        System.out.println(t.toString());
+<<<<<<< HEAD
         String a = "문현역";
         Pattern pattern = Pattern.compile(".*\\s?[ㄱ-ㅎ|ㅏ-ㅣ|가-힣|0-9]+역\\s?.*");
         Matcher matcher = pattern.matcher(a);
@@ -30,5 +31,10 @@ public class test {
         if(matcher.find()){
             System.out.println(matcher.group());
         }
+=======
+        boolean a = false;
+        boolean b = false;
+        System.out.println(a^b);
+>>>>>>> 64f1e4890cc0a23d801294a7a1cad1f7e0888fd8
     }
 }
